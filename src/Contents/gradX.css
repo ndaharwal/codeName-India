@@ -1,0 +1,785 @@
+.gradx_hide {
+  display: none;
+
+}
+#gradientHoder {
+  overflow: visible;
+}
+.gradx {
+  position: relative;
+  background: #FAFAFA;
+  background: -moz-linear-gradient(top, #FAFAFA 0%, #DFDFDF 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FAFAFA), color-stop(100%,#DFDFDF));
+  background: -webkit-linear-gradient(top, #FAFAFA 0%,#DFDFDF 100%);
+  background: -o-linear-gradient(top, #FAFAFA 0%,#DFDFDF 100%);
+  background: -ms-linear-gradient(top, #FAFAFA 0%,#DFDFDF 100%);
+  background: linear-gradient(top, #FAFAFA 0%,#DFDFDF 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#dfdfdf',GradientType=0 );
+  /* border: 4px solid #dfdfdf;
+  padding: 10px; */
+  font-weight: normal;
+  width: auto;
+  font-size: 12px;
+}
+
+.gradx textarea,input,select {
+  font-size: 12px;
+}
+
+.gradx_container {
+  /* padding: 10px;
+  background: white;
+  /* padding-left: 16px; */
+  /* border: 5px solid #e5e5e5;
+   border-radius: 2px;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+   -o-border-radius: 2px;*/
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+
+}
+
+.gradx_panel {
+  width: 100%;
+  height: 26px;
+  border: 1px solid #ccc;
+}
+
+.gradx_start_sliders {
+  width: 100%;
+  margin-top: 8px;
+  /* margin-left: -0.4em; */
+  /* background: whitesmoke; */
+  height: 12px;
+  /* box-shadow: 5px 9px 30px rgba(0, 0, 0, .5) inset;
+  -webkit-box-shadow: 5px 9px 30px rgba(0, 0, 0, .5) inset;
+  -moz-box-shadow: 5px 9px 30px rgba(0, 0, 0, .5) inset;
+  -o-box-shadow: 5px 9px 30px rgba(0, 0, 0, .5) inset; */
+
+  /* border: 1px solid #f1f1f1; */
+}
+
+.gradx_slider {
+  position: absolute;
+  left: 0px;
+  top: 95px;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border: 1px solid black;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+.gradx_slider:hover {
+  opacity: 1;
+  cursor: move;
+}
+
+.gradx_slectboxes select {
+  color: black;
+  vertical-align: baseline;
+}
+
+
+.gradx_slider:after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 4px;
+  border-style: solid;
+  border-width: 48px 1px 0px 0px;
+  border-color: transparent #000;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+
+.gradx_code, gradx_code:focus {
+  padding: 8px;
+  color: #111;
+  text-shadow: #eee 0 1px;
+  background: #bba;
+  margin-top: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  display: none;
+  overflow: auto;
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  font-family: 'Maven Pro', sans-serif;
+  border: 0;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  -o-box-shadow: none !important;
+  line-height: 14px;
+
+  /* the long awaited dream of 100% width comes true */
+  /* All hail CSS3 */
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+
+
+}
+
+#gradx_slider_info {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 2px;
+  background: #f1f1f1;
+}
+
+#gradx_slider_controls {
+  margin-left: 15px;
+  padding-top:4px;
+  padding-bottom: 4px;
+}
+
+.gradx_add_slider {
+  border: 1px solid black;
+  width: 25px;
+  margin-bottom: 4px;
+}
+
+
+.gradx_slectboxes {
+  display: inline;
+}
+
+.gradx_gradient_type {
+  height: 25px;
+  background: #efefef;
+  border: 1px solid #ccc;
+  padding-right: 2px;
+  width: 70px;
+  margin: 0;
+}
+
+.gradx_btn > .icon {
+  position: relative;
+  /* left: -3px; */
+  background-size: 12px 12px;
+  top: 2px;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  background-position: 0 0;
+}
+
+.gradx_btn > .icon-add {
+  background-image: url("icons/plus.png");
+  /* left: -10px; */
+}
+
+.gradx_btn > .icon-remove {
+  background-image: url("icons/remove.png");
+}
+
+
+.gradx_btn > .icon-file-css {
+  background-image: url("icons/file-css.png");
+}
+
+.gradx_btn > .icon-preset {
+  background-image: url("icons/preset.png");
+}
+
+
+/* Common stuff */
+.picker-wrapper,
+.slide-wrapper {
+  position: relative;
+  float: left;
+}
+.picker-indicator,
+.slide-indicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+.picker,
+.slide {
+  cursor: crosshair;
+  float: left;
+}
+
+/* Default skin */
+
+.cp-default {
+  border-radius: 6px;
+  float: left;
+  /* margin-top: 24px; */
+  margin-left: -145px;
+  position: absolute;
+  z-index: 10000;
+}
+
+.cp-default .picker {
+  width: 200px;
+  height: 200px;
+}
+.cp-default .slide {
+  width: 30px;
+  height: 200px;
+}
+.cp-default .slide-wrapper {
+  margin-left: 10px;
+}
+.cp-default .picker-indicator {
+  width: 5px;
+  height: 5px;
+  border: 2px solid darkblue;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  filter: alpha(opacity=50);
+  background-color: white;
+}
+.cp-default .slide-indicator {
+  width: 100%;
+  height: 10px;
+  left: -4px;
+  opacity: .6;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: alpha(opacity=60);
+  border: 4px solid black;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #333;
+}
+
+/* some bootstrap styles */
+
+.gradx_btn {
+  /* display: inline-block; */
+  /* padding: 4px 10px 4px; */
+  font-size: 13px;
+  /* line-height: 18px; */
+  color: #afafaf;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-bottom-color: #b3b3b3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+  filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.gradx_btn:hover,
+.gradx_btn:active,
+.gradx_btn.active,
+.gradx_btn.disabled,
+.gradx_btn[disabled] {
+  background-color: #e6e6e6;
+}
+
+.gradx_btn:active,
+.gradx_btn.active {
+  background-color: #cccccc \9;
+}
+
+.gradx_btn:hover {
+  color: #333333;
+  text-decoration: none;
+  background-color: #e6e6e6;
+  /* Buttons in IE7 don't get borders, so darken on hover */
+
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+.gradx_btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.gradx_btn.active,
+.gradx_btn:active {
+  background-color: #e6e6e6;
+  background-color: #d9d9d9 \9;
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.gradx_btn.disabled,
+.gradx_btn[disabled] {
+  cursor: default;
+  background-color: #e6e6e6;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.sp-input-container{
+  display: none;
+}
+
+#load-grad-1 {
+  background: #fff23a;
+  background: linear-gradient(to bottom, #fff23a 46%,#e83e39 100%);
+}
+#load-grad-2 {
+  background: #ff45e8;
+  background: linear-gradient(to bottom,  #ff45e8 36%,#7f2274 100%);
+}
+#load-grad-3 {
+  background: #FF2512;
+  background: linear-gradient(to bottom,  #FF2512 36%,#7F1209 100%);
+}
+#load-grad-4 {
+  background: #C2FF23;
+  background: linear-gradient(to bottom,  #C2FF23 50%,#617F12 100%);
+}
+#load-grad-5 {
+  background: #1D4DFF;
+  background: linear-gradient(to bottom,  #1D4DFF 54%,#0F277F 100%);
+}
+#load-grad-6 {
+  background: #FF007B;
+  background: linear-gradient(to bottom,  #FF007B 50%,#7F003D 100%);
+}
+#load-grad-7 {
+  background: #E5A71D;
+  background: linear-gradient(to bottom,  #E5A71D 50%,#7F5D10 100%);
+}
+#load-grad-8 {
+  background: #00ADEE;
+  background: linear-gradient(to bottom,  #00ADEE 50%,#2E3191 100%);
+}
+#load-grad-9 {
+  background: #FFFFFF;
+  background: linear-gradient(to bottom,  #FFFFFF 55%,#231F20 100%);
+}
+#load-grad-10 {
+  background: #FFF23A;
+  background: linear-gradient(to bottom,  #FFF23A 55%,#00A551 100%);
+}
+#load-grad-11 {
+  background: #F1B365;
+  background: linear-gradient(to bottom,  #F1B365 73%,#F05A28 100%);
+}
+#load-grad-12 {
+  background: #F6921E;
+  background: linear-gradient(to bottom,  #F6921E 64%,#7F1209 100%);
+}
+#load-grad-13 {
+  background: #8B096F;
+  background: linear-gradient(to bottom,  #8B096F 47%,#340048 100%);
+}
+#load-grad-14 {
+  background: #ED1C24;
+  background: linear-gradient(to bottom,  #ED1C24 60%,#5E000E 100%);
+}
+#load-grad-15 {
+  background: #f1e767;
+  background: linear-gradient(to bottom,  #f1e767 0%,#feb645 100%);
+}
+#load-grad-16 {
+  background: #FFC709;
+  background: linear-gradient(to bottom,  #FFC709 44%,#F37021 100%);
+}
+#load-grad-17 {
+  background: #FFF572;
+  background: linear-gradient(to bottom,  #FFF572 54%,#FFCB05 100%);
+}
+#load-grad-18 {
+  background: #75A333;
+  background: linear-gradient(to bottom,  #75A333 50%,#1E3D0A 100%);
+}
+
+#load-grad-19 {
+  background: #1F73B7;
+  background: linear-gradient(to bottom,  #1F73B7 61%,#162552 100%);
+}
+
+#load-grad-20 {
+  background: #FFFFFF;
+  background: linear-gradient(to bottom,  #FFFFFF 45%,#BCB49E 100%);
+}
+
+#load-grad-21 {
+  background: #b3dced;
+  background: linear-gradient(to bottom,  #b3dced 0%,#29b8e5 50%,#bce0ee 100%);
+}
+
+#load-grad-22 {
+  background: #C00072;
+  background: linear-gradient(to bottom,  #C00072 50%,#7B0046 100%);
+}
+#load-grad-23 {
+  background: #587ABC;
+  background: linear-gradient(to bottom,  #587ABC 50%,#132143 100%);
+}
+#load-grad-24{
+  background: #FFEF00;
+  background: linear-gradient(to bottom,  #FFEF00 50%,#FBAD1B 100%);
+}
+#load-grad-25 {
+  background: #D46400;
+  background: linear-gradient(to bottom,  #D46400 60%,#743124 100%);
+}
+#load-grad-26 {
+  background: #A569AB;
+  background: linear-gradient(to bottom,  #A569AB 60%,#583550 100%);
+}
+#load-grad-27 {
+  background: #C52357;
+  background: linear-gradient(to bottom,  #C52357 67%,#720931 100%);
+}
+#load-grad-28 {
+  background: #782B90;
+  background: linear-gradient(to bottom,  #782B90 54%,#4F1550 100%);
+}
+#load-grad-29 {
+  background: #F4A5C3;
+  background: linear-gradient(to bottom,  #F4A5C3 57%,#ED4A90 100%);
+}
+#load-grad-30 {
+  background: #E344D3;
+  background: linear-gradient(to bottom,  #E344D3 51%,#1621F3 100%);
+}
+#load-grad-31 {
+  background: #77F377;
+  background: linear-gradient(to bottom,  #77F377 51%,#1527F5 100%);
+}
+#load-grad-32 {
+  background: #FAE45E;
+  background: linear-gradient(to bottom,  #FAE45E 51%,#E73F32 100%);
+}
+#load-grad-33 {
+  background: #1527F5;
+  background: linear-gradient(to bottom,  #1527F5 51%,#7BFBFD 100%);
+}
+#load-grad-34 {
+  background: #F8D7AF;
+  background: linear-gradient(to bottom,  #F8D7AF 51%,#E8355F 100%);
+}
+#load-grad-35 {
+  background: #66D5F1;
+  background: linear-gradient(to bottom,  #66D5F1 51%,#DA337E 100%);
+}
+#load-grad-36 {
+  background: #9CB59C;
+  background: linear-gradient(to bottom,  #9CB59C 0%, #D9B08D 59%,#9D4C59 100%);
+}
+#load-grad-37 {
+  background: #D9B08D;
+  background: linear-gradient(to bottom,  #D9B08D 0%, #0DEFFF 53%,#1B75BB 100%);
+}
+#load-grad-38 {
+  background: #A8C371;
+  background: linear-gradient(to bottom,  #A8C371 0%, #4BAF71 52%,#008F85 100%);
+}
+#load-grad-39 {
+  background: #6E37B7;
+  background: linear-gradient(to bottom,  #6E37B7 0%, #B644B8 55%,#2D5CBB 100%);
+}
+#load-grad-40 {
+  background: #F9CABD;
+  background: linear-gradient(to bottom,  #F9CABD 0%, #E98498 53%,#302D58 100%);
+}
+#load-grad-41 {
+  background: #F1B365;
+  background: linear-gradient(to bottom,  #F1B365 0%, #FF007B 56%,#652D90 100%);
+}
+#load-grad-42 {
+  background: #F1B365;
+  background: linear-gradient(to bottom,  #F1B365 0%, #E67369 43%,#0AB3BF 100%);
+}
+#load-grad-43 {
+  background: #8AB59B;
+  background: linear-gradient(to bottom,  #8AB59B 0%, #E2BC8D 46%,#A64056 100%);
+}
+#load-grad-44 {
+  background: #A4C565;
+  background: linear-gradient(to bottom,  #A4C565 0%, #00AC6C 46%,#009087 100%);
+}
+#load-grad-45 {
+  background: #A9CFB7;
+  background: linear-gradient(to bottom,  #A9CFB7 0%, #00B3B5 59%,#295490 100%);
+}
+#load-grad-46 {
+  background: #7E2BBE;
+  background: linear-gradient(to bottom,  #7E2BBE 0%, #5743BF 59%,#125BC1 100%);
+}
+#load-grad-47 {
+  background: #F6EACE;
+  background: linear-gradient(to bottom,  #F6EACE 0%, #93A59A 46%,#007479 100%);
+}
+#load-grad-48 {
+  background: #FFCDBC;
+  background: linear-gradient(to bottom,  #FFCDBC 0%, #FB8299 46%,#5A3C67 100%);
+}
+#load-grad-49 {
+  background: #F85077;
+  background: linear-gradient(to bottom,  #F85077 0%, #B4245E 46%,#700046 100%);
+}
+#load-grad-50 {
+  background: #FFCDBC;
+  background: linear-gradient(to bottom,  #FFCDBC 0%, #FB8299 46%,#5A3C67 100%);
+}
+#load-grad-51 {
+  background: #F85077;
+  background: linear-gradient(to bottom,  #F85077 0%, #B4245E 46%,#700046 100%);
+}
+#load-grad-52 {
+  background: #FDB753;
+  background: linear-gradient(to bottom,  #FDB753 0%, #A02654 46%,#440051 100%);
+}
+#load-grad-53 {
+  background: #00A7A1;
+  background: linear-gradient(to bottom,  #00A7A1 0%, #39C2B8 46%,#00455E 100%);
+}
+#load-grad-54 {
+  background: #1B12CB;
+  background: linear-gradient(to bottom,  #00A7A1 14%, #B830EC 53%,#72E8F3 100%);
+}
+#load-grad-55 {
+  background: #FF12CB;
+  background: linear-gradient(to bottom,  #FF12CB 14%, #9B00ED 53%,#00455E 100%);
+}
+#load-grad-56 {
+  background: #FF731B;
+  background: linear-gradient(to bottom,  #FF731B 0%, #FAAF40 29%, #EC1C24 52%, #FF45E8 78%, #2E3191 100%);
+}
+#load-grad-57 {
+  background: #EC1C24;
+  background: linear-gradient(to bottom,  #EC1C24 0%, #F9EC31 26%, #EE4036 52%, #F9EC31 81%, #EC1C24 100%);
+}
+#load-grad-58 {
+  background: #018F85;
+  background: linear-gradient(to bottom,  #018F85 0%, #1D4DFF 38%, #FF45E8 74%, #07777F 100%);
+}
+#load-grad-59 {
+  background: #7F3A0D;
+  background: linear-gradient(to bottom,  #7F3A0D 0%, #FF731B 26%, #BF5714 55%, #FF731B 88%, #7F3A0D 100%);
+}
+#load-grad-60 {
+  background: #154004;
+  background: linear-gradient(to bottom,  #154004 0%, #2A7F08 14%, #54FF11 31%, #2A7F08 50%, #4CE50F 69%, #2A7F08 81%, #154004 100%);
+}
+#load-grad-61 {
+  background: #40001F;
+  background: linear-gradient(to bottom,  #40001F 0%, #FF45E8 21%, #7F003D 45%, #FF45E8 67%, #7F2274 84%, #40001F 100%);
+}
+#load-grad-62 {
+  background: #BE1E2D;
+  background: linear-gradient(to bottom,  #BE1E2D 0%, #E53ED1 25%, #E5006F 54%, #E53ED1 78%, #BE1E2D 100%);
+}
+#load-grad-63 {
+  background: #E83E39;
+  background: linear-gradient(to bottom,  #E83E39 0%, #F28F3F 25%, #FDC60B 43%, #F28F3F 58%, #ED693C 82%, #E83E39 100%);
+}
+#load-grad-64 {
+  background: #FFB200;
+  background: linear-gradient(to bottom,  #FFB200 0%, #FC401F 30%, #FB0030 54%, #F9EC31 81%, #DF0098 100%);
+}
+#load-grad-65 {
+  background: #FFB200;
+  background: linear-gradient(to bottom,  #FFB200 0%, #FF6400 15%, #FB0030 24%, #DF0098 36%, #B51098 62%, #2E4296 78%, #008CB7 100%);
+}
+#load-grad-66 {
+  background: #E89ED8;
+  background: linear-gradient(to bottom,  #E89ED8 0%, #B51098 25%, #F90893 47%, #00E2BB 75%, #0F3470 100%);
+}
+#load-grad-67 {
+  background: #A87030;
+  background: linear-gradient(to bottom,  #A87030 0%, #FAB217 33%, #F3903F 66%, #F9EC31 81%, #A84927 100%);
+}
+#load-grad-68 {
+  background: #90552F;
+  background: linear-gradient(to bottom,  #90552F 0%, #322106 29%, #8D5D25 58%, #543213 84%, #C3922E 100%);
+}
+#load-grad-69 {
+  background: #8A949B;
+  background: linear-gradient(to bottom,  #8A949B 0%, #FFFFFF 16%, #437A7F 37%, #FFFFFF 66%, #64747E 100%);
+}
+#load-grad-70 {
+  background: #FFDF81;
+  background: linear-gradient(to bottom,  #FFDF81 0%, #0067A0 28%, #CA234D 50%, #FFDF81 74%, #0067A0 100%);
+}
+#load-grad-71 {
+  background: #A23642;
+  background: linear-gradient(to bottom,  #A23642 0%, #CE5A4F 29%, #E8B091 41%, #DB6752 52%, #CA4D46 69%, #A24339 75%, #A81330 100%);
+}
+#load-grad-72 {
+  background: #608A46;
+  background: linear-gradient(to bottom,  #608A46 0%, #B5D994 28%, #C0DEA4 37%, #C8E0AF 43%, #DEE6CB 57%, #F7F2E2 85%, #D9DAC0 100%);
+}
+#load-grad-73 {
+  background: #97292D;
+  background: linear-gradient(to bottom,  #97292D 0%, #CE3045 11%, #F48472 25%, #BB3041 38%, #CE3045 55%, #CD6C60 78%, #CE3045 87%, #881C27 100%);
+}
+#load-grad-74 {
+  background: #C2671D;
+  background: linear-gradient(to bottom,  #C2671D 0%, #D77E3A 10%, #F68D3A 24%, #F2A56E 43%, #F68D3A 60%, #ED8837 79%, #F2A56E 89%, #FDCA92 100%);
+}
+#load-grad-75 {
+  background: #A6CE39;
+  background: linear-gradient(to bottom,  #A6CE39 0%, #103A4F 30%, #03BF00 58%, #552F7F 81%, #DA2128 100%);
+}
+#load-grad-76 {
+  background: #E01F81;
+  background: linear-gradient(to bottom,  #E01F81 0%, #BD506C 15%, #EA895F 30%, #A32175 47%, #F8D429 64%, #009C4C 79%, #E02181 100%);
+}
+#load-grad-77 {
+  background: #593387;
+  background: linear-gradient(to bottom,  #593387 0%, #5484BB 15%, #3EC7F3 30%, #00A04F 47%, #DFAB59 64%, #80A651 79%, #593487 100%);
+}
+#load-grad-78 {
+  background: #B7151B;
+  background: linear-gradient(to bottom,  #B7151B 0%, #E6404B 15%, #E98A7B 30%, #7C78B8 47%, #00B0B0 64%, #7B76B6 79%, #E7322F 100%);
+}
+#load-grad-79 {
+  background: #FDBA56;
+  background: linear-gradient(to bottom,  #FDBA56 0%, #F48E53 15%, #ED5E4E 30%, #683A96 47%, #ED872B 64%, #7B76B6 79%, #F15F4F 100%);
+}
+#load-grad-80 {
+  background: #00AB4E;
+  background: linear-gradient(to bottom,  #00AB4E 0%, #FDC70C 28%, #F3903F 66%, #503293 100%);
+}
+#load-grad-81 {
+  background: #AD123C;
+  background: linear-gradient(to bottom,  #AD123C 0%, #DA1F47 12%, #E3594B 33%, #F1A479 52%, #FEE4D2 80%, #EDDABB 100%);
+}
+#load-grad-82 {
+  background: #2B275C;
+  background: linear-gradient(to bottom,  #2B275C 0%, #4A3C85 30%, #5D4A93 50%, #908AB8 66%, #2B275C 100%);
+}
+#load-grad-83 {
+  background: #FBD437;
+  background: linear-gradient(to bottom,  #FBD437 0%, #87002F 25%, #ED1C24 51%, #BE2A4A 77%, #F58220 100%);
+}
+#load-grad-84 {
+  background: #A2C993;
+  background: linear-gradient(to bottom,  #A2C993 0%, #EC8B9A 20%, #EC8B9A 30%, #F8E09A 47%, #EC8B9A 64%, #F9E89A 75%, #7BBDDF 87%, #A2C993 100%);
+}
+#load-grad-85 {
+  background: #A72F43;
+  background: linear-gradient(to bottom,  #A72F43 0%, #D0CE86 15%, #7F9045 30%, #C2A04E 47%, #806430 64%, #95A06B 79%, #A32D41 100%);
+}
+#load-grad-86 {
+  background: #C2A04E;
+  background: linear-gradient(to bottom,  #C2A04E 0%, #39B54A 15%, #C8D632 30%, #C2A04E 47%, #00B0B0 64%, #D9E597 79%, #C2A04E 100%);
+}
+#load-grad-87 {
+  background: #9ACC59;
+  background: linear-gradient(to bottom,  #9ACC59 0%, #F48E53 15%, #ED5E4E 30%, #9ACC59 47%, #ED872B 64%, #F1C332 79%, #F15F4F 100%);
+}
+#load-grad-88 {
+  background: #466250;
+  background: linear-gradient(to bottom,  #466250 0%, #FFFBCC 10%, #FED5B0 18%, #466250 26%, #FFFBCC 35%, #41573E 50%, #FED5B0 64%, #41573E 78%, #EDE9CC 90%, #41573E 100%);
+}
+#load-grad-89 {
+  background: #975227;
+  background: linear-gradient(to bottom,  #975227 0%, #F1A57A 7%, #EC7A30 19%, #D9762D 28%, #A65B2F 44%, #EE8357 57%, #EC7A30 72%, #965229 82%, #EC7A30 90%, #A65B2D 100%);
+}
+#load-grad-90 {
+  background: #550900;
+  background: linear-gradient(to bottom,  #550900 0%, #E92D00 7%, #EC5430 19%, #FF7A42 28%, #2A0700 44%, #EE8357 57%, #EC5430 72%, #2A0400 82%, #B01F00 100%);
+}
+#load-grad-91 {
+  background: #97292D;
+  background: linear-gradient(to bottom,  #97292D 0%, #CE3045 11%, #F48472 25%, #BB3041 38%, #CE3045 55%, #CD6C60 78%, #CE3045 87%, #881C27 100%);
+}
+#load-grad-92 {
+  background: #A9C358;
+  background: linear-gradient(to bottom,  #A9C358 0%, #F7B472 21%, #E2AB4A 39%, #7E9F4D 61%, #C5DF94 79%, #C1DC7E 100%);
+}
+#load-grad-93 {
+  background: #F9D837;
+  background: linear-gradient(to bottom,  #F9D837 0%, #A7255B 30%, #3EC7F3 30%, #552F7F 52%, #ED6325 100%);
+}
+#load-grad-94 {
+  background: #ffffff;
+  background: linear-gradient(to bottom,  #ffffff 0%,#231f20 100%);
+}
+#load-grad-95 {
+  background: #cc6699;
+  background: linear-gradient(to bottom,  #cc6699 0%,#7f2274 100%);
+}
+#load-grad-96 {
+  background: #75a333;
+  background: linear-gradient(to bottom,  #75a333 0%,#1e3d0a 100%);
+}
+#load-grad-97 {
+  background: #ffb365;
+  background: linear-gradient(to bottom,  #ffb365 0%, #ff007b 56%,#652d90 100%);
+}
+#load-grad-98 {
+  background: #f6921e;
+  background: linear-gradient(to bottom,  #f6921e 0%,#7f1209 100%);
+}
+#load-grad-99 {
+  background: #f1b365;
+  background: linear-gradient(to bottom,  #f1b365 0%,#0ab3bf 100%);
+}
+#load-grad-100 {
+  background: #ff9933;
+  background: linear-gradient(to bottom,  #ff9933 0%,#ffffff 50%,#138808 100%);
+}
+
+.presets-list {
+  margin: 5px;
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+}
+
+.presets-list li {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid #494949;
+}
+
+.presets-list div {
+  display: block;
+  height: 100%;
+}
+
+.presets-list img {
+  display: block;
+}

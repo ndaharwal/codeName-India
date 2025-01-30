@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* You may need to import this font */
+}
+
+/* Button Styles */
+.button-container {
+    position: relative;
+	line-height: 1.2;
+	width: 250px;
+}
+
+.activeOption{
+	background-color:#d8e3ff;
+	border-radius: 6px;
+}
+
+button {
+    background: #58595b;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 20px;
+	padding-right: 20px;
+    color: #b5b5b5;
+    cursor: pointer;
+	/* min-width: 100px; */
+	text-align: left;
+}
+
+/* Font Dropdown Styles */
+.font-dropdown {
+    width: 275px;
+    height: 70vh;
+	min-height: 400px;
+    background: #EEF2F3;
+    box-shadow: 0px 0px 6px #00000029;
+    border-radius: 8px;
+    display: none; /* Initially hide the dropdown */
+    position: fixed; /* Set to relative position */
+	padding: 15px;
+	overflow: hidden;
+	margin-top: 2px;
+}
+
+/* Add these styles at the end of your existing CSS file */
+
+/* SVG Icons Row Styles */
+.svg-icons-row {
+    display: flex;
+}
+
+.svg-icon {
+    width: 40px;
+    height: 40px;
+    background: #ffff;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+	border-radius: 40px;
+}
+
+.svg-icon:hover {
+    background: #d8e3ff;
+}
+
+/* Font Filters Dropdown Styles */
+.font-filters-dropdown {
+    display: none;
+	width: 230px;
+    background: #212121;
+    color: #FFFFFF;
+    padding: 10px;
+    box-shadow: 0px 0px 6px #00000029;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 6px;
+    flex-direction: column;
+}
+
+
+.filter-option {
+    display: block; /* Set to block display */
+    padding: 8px;
+	cursor: pointer;
+    white-space: nowrap; /* Prevent line breaks within options */
+}
+
+
+.filter-option.selected + .svg-icon img {
+    filter: brightness(1) saturate(100%) hue-rotate(0deg) contrast(100%);
+    color: blue; /* Change this to the color you prefer */
+	background-color: blue;
+}
+
+
+.filter-option.selected::after {
+    content: '\2713'; /* Checkmark character */
+    margin-left: 5px;
+}
+
+.filter-option:hover {
+    background-color: #333; /* Change this to the color you prefer */
+    color: #fff; /* Change this to the text color you prefer */
+	border-radius: 6px;
+}
+
+/* Font Search Bar Styles */
+.font-search {
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 38px;
+    background: #FFFFFF;
+    border-radius: 19px;
+    opacity: 1;
+    margin-bottom: 10px;
+    margin-top: 15px;
+	box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    border-radius: 19px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 25px;
+	cursor: pointer;
+}
+
+/* Font Listing Styles */
+.list-rectangle {
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+	padding: 0px 11px 1px 5px;
+}
+
+.icon-column {
+    width: 11%;
+	display: flex;
+	justify-content: flex-end;
+	padding: 5px;
+}
+
+.list-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.font-column {
+  width: 89%; /* Adjust the width of the second column */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+
+/* Styles for the title */
+.title {
+  font-weight: normal;
+  font-family: Poppins;
+  font-size: 14px;
+  color: #262626;
+  /* padding: 5px; */
+}
+
+/* Styles for the list item */
+.list-item {
+  width: 240px;
+  opacity: 1;
+/*   margin-top: 10px; */
+	padding: 5px;
+  cursor: pointer; /* Add this line to change the cursor to a pointer */
+}
+
+/* Styles for the list item on hover */
+.list-item:hover {
+    background: #d8e3ff; /* Change the background color on hover */
+    border-radius: 8px;
+}
+
+.list-item.selected:hover {
+    background: #d2dfff; /* Change the background color for the selected state on hover */
+}
+
+.list-item.selected {
+   background-color: #d2dfff; /* Change the background color as needed */  
+}
+
+.list-item.selected .font-column .title {
+    font-weight: bold;
+}
+
+.list-item.selected .icon-column .list-icon {
+    color: blue; /* Change this to the color you prefer */
+    background-color: blue; /* Change this to the background color you prefer */
+}
+
+
+.title.selected-title {
+    font-weight: bold;
+}
+
+/* Styles for the scrollable section */
+
+.scrollable-section {
+    max-height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 15px;
+}
+
+ 
+
+/* Customize scrollbar for WebKit browsers */
+.scrollable-section::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+.scrollable-section::-webkit-scrollbar-thumb {
+  background-color: #cecece; /* Set the color of the thumb */
+  border-radius: 4px; /* Optional: Round the corners of the thumb */
+}
+
+.scrollable-section::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Set the color of the track */
+}
+
+
+#icon5.selected {
+    background: #d8e3ff; /* Set the background color for the selected state */
+}
+
+
+/* Tooltip Styles */
+.filter-tooltip {
+    position: absolute;
+    display: none;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 1;
+	margin-top: 70px;
+}
+
+#selectFontBtn {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
