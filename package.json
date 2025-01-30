@@ -1,0 +1,49 @@
+{
+  "name": "indiafont-app",
+  "productName": "Indiafont V4",
+  "version": "4.0.0",
+  "description": "Powered by ArtoMania Studio",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron-forge start --inspect-electron",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "fileAssociations": [
+    {
+      "ext": "if",
+      "name": "IndiaFont Design File",
+      "description": "IndiaFont Design File"
+    }
+  ],
+  "keywords": [],
+  "author": "Pankaj Jaiswal",
+  "license": "MIT",
+  "dependencies": {
+    "@electron/asar": "^3.2.8",
+    "axios": "^1.4.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "install": "^0.13.0",
+    "jwt-decode": "^3.1.2",
+    "ncp": "^2.0.0",
+    "npm": "^10.2.3",
+    "rimraf": "^5.0.5",
+    "svg-to-pdfkit": "^0.1.8",
+    "yauzl": "^2.10.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.0",
+    "@electron-forge/maker-deb": "^6.4.0",
+    "@electron-forge/maker-rpm": "^6.4.0",
+    "@electron-forge/maker-squirrel": "^6.4.0",
+    "@electron-forge/maker-zip": "^6.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.0",
+    "electron": "26.0.0",
+    "electron-builder": "^24.6.4",
+    "electron-packager": "^17.1.2",
+    "electron-updater": "^6.1.4"
+  }
+}
