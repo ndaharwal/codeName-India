@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf');
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraBold.ttf');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60rem;
+    height: 30px;
+    background: #0058FF;
+}
+
+.header-logo {
+    margin-left: 1rem;
+    height: 75%;
+}
+
+.close-button {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: #0058FF solid 1px;
+
+    transition: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.close-button:hover{
+    border: #00DCFF solid 1px;
+}
+
+.close-button svg path{
+    fill: #FFF;
+}
+
+.logo {
+    width: 10rem;
+    height: 2.16669rem;
+    flex-shrink: 0;
+    margin-bottom: 2rem;
+}
+
+.session-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60rem;
+    height: 31rem;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.session-details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    width: 20rem;
+    height: 18rem;
+    flex-shrink: 0;
+}
+
+.info {
+    color: #131523;
+    width: 12.5rem;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.devices {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.device {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 9.375rem;
+    height: 6.25rem;
+    flex-shrink: 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+.symbol {
+    position: absolute;
+    top: -20px;
+    left: 55px;
+}
+
+#device-name {
+    color: #131523;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#device-status {
+    color: #696B78;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: -15px;
+    left: 50px;
+    width: 3.375rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    background: #FFF;
+    color: #131523;
+    font-family: "Poppins";
+    font-size: 0.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    box-shadow: 0px 20px 30px 0px rgba(6, 32, 164, 0.20);
+
+}
+
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+
+    transition: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.back-button svg {
+    transition: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+.back-button:hover > svg {
+    scale: 1.5;
+}

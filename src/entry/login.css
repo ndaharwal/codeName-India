@@ -1,0 +1,441 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf');
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraBold.ttf');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60rem;
+    height: 30px;
+    background: #0058FF;
+}
+
+.header-logo {
+    margin-left: 1rem;
+    height: 75%;
+}
+
+.close-button {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    border: #0058FF solid 1px;
+
+    transition: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.close-button:hover {
+    border: #00DCFF solid 1px;
+}
+
+.close-button svg path {
+    fill: #FFF;
+}
+
+.main-login {
+    display: flex;
+    width: 60rem;
+    height: 31rem;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.main-image {
+    width: 60%;
+    height: 100%;
+    background: #C0C0C0;
+    position: relative;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.visit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 0.8rem;
+    left: 0.8rem;
+    width: 4.875rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background: #FFF;
+    color: #131523;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    box-shadow: 0px 20px 30px 0px rgba(6, 32, 164, 0.20);
+
+}
+
+.visit-button:hover {
+    text-decoration: underline;
+}
+
+.main-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100%;
+    background: #FFF;
+}
+
+.main-form .logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.login-form {
+    width: 13.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.login-form-step1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.login-form-step1 .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.login-form input {
+    width: 13.75rem;
+    height: 2.5rem;
+    border: none;
+    /* padding: 5px; */
+    font-family: "Poppins";
+    font-size: 0.7rem;
+    font-style: normal;
+    padding-left: 10px;
+    border-radius: 0.5rem;
+    color: #696B78;
+    background: #EBF7FB;
+    box-shadow: 3px 3px 16px 0px rgba(0, 0, 0, 0.10) inset;
+}
+
+.login-form input:focus-visible {
+    outline: 2px solid rgba(0, 89, 255, 0.785);
+}
+
+#error-message {
+    color: #bd0101;
+    font-family: "Poppins";
+    font-size: 0.6rem;
+    font-style: normal;
+    text-align: center;
+}
+
+.forgot-password {
+    margin-left: auto;
+    font-family: "Poppins";
+    font-size: 0.6rem;
+    font-style: normal;
+    line-height: normal;
+    color: #696B78;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    color: #1c1c1c;
+    text-decoration-line: underline;
+}
+
+.login-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 14rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #0058FF;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 0.75rem;
+    font-style: normal;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transition: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.login-form button:hover {
+    background: #1771f8;
+    transform: scale(0.95);
+}
+
+.create-account {
+    color: #0058FF;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.create-account:hover {
+    text-decoration-line: underline;
+}
+
+.login-form-step2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.password-back-button {
+    margin-top: 5px;
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.password-back-button:hover {
+    text-decoration: underline;
+}
+
+.email-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.otp-step {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.register-form {
+    width: 13.75rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.register-form-step1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.register-form-step2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+}
+
+.register-form input {
+    width: 13.75rem;
+    height: 2.5rem;
+    border: none;
+    /* padding: 5px; */
+    font-family: "Khand";
+    font-size: 0.8rem;
+    font-style: normal;
+    padding-left: 10px;
+    border-radius: 0.5rem;
+    color: #696B78;
+    background: #EBF7FB;
+    box-shadow: 3px 3px 16px 0px rgba(0, 0, 0, 0.10) inset;
+}
+
+.register-form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 14rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: #0058FF;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 0.75rem;
+    font-style: normal;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.login-account {
+    color: #696B78;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-account span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.password-recovery-form {
+    width: 18rem;
+    height: 200px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.copyright-line {
+    color: #696B78;
+    font-size: 0.6rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    pointer-events: none;
+}
+
+.company-logos {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+
+/* Center the loader and text */
+.loader-container {
+    display: none;
+    /* flex-direction: column; */
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+/* Define the loader animation */
+.loader {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 2s linear infinite;
+}
+
+.create-account-page {
+    display: none;
+    position: relative;
+    width: 60rem;
+    height: 31rem;
+    background: #FBFBFB;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+
+    transition: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+.back-button svg {
+    transition: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.back-button:hover>svg {
+    scale: 1.5;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
