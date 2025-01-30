@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf');
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf');
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-ExtraBold.ttf');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    width: 100%;
+    height: 90vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+	user-drag: none;
+	user-select: none;
+}
+
+.preloader {
+    height: 10px;
+    width: 100px;
+    background: linear-gradient(to right, #662D8C 10%, #ED1E79 100%);
+    animation: fill 45s linear forwards; /* Use 'forwards' for animation-fill-mode */
+    border-radius: 8px;
+	user-drag: none;
+}
+
+@keyframes fill {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+	
+}
+
+.row {
+	width: 880px;
+    height: 50vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	background-color: white;
+	border-radius: 8px;
+	/* box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 40px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+	    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 
+                0px 4px 8px rgba(0, 0, 0, 0.1), 
+                0px 8px 16px rgba(0, 0, 0, 0.1), 
+                0px 16px 32px rgba(0, 0, 0, 0.1), 
+                0px 32px 64px rgba(0, 0, 0, 0.1);
+		flex-direction: row-reverse;
+}
+
+.left-column {
+	padding: 10px;
+	width:55%;
+	margin-left: -100px;
+}
+
+.right-column {
+    flex: 1;
+    padding: 70px 10px 70px 50px;
+	/* padding: 50px; */
+    max-width: 40%;
+}
+
+img {
+	width: auto;
+	height: auto;
+	border-radius: 8px;
+	margin-top: -10px;
+	user-select: none;
+}
+
+h2 {
+	font-size: 16px;
+	margin-bottom: 8px;
+	color: #333;
+}
+
+p {
+	color: #666;
+	font-size: 13px;
+}
+
+
+p2 {
+    font-size: 14px;
+}
+
+user {
+	color: #2062E8;
+	font-size: 18px;	
+}
+
+.non-selectable-text .user, user, p2, p, h2{
+    user-select: none;
+}

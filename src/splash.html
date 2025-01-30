@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="splash.css" />
+</head>
+
+<body>
+	<div class="row">
+
+		<div class="right-column">
+			<div>
+				<user>Dear, <span id="splash-username">IndiaFont User</span></user>
+			</div>
+			<div>
+				<h2>Welcome to</h2>
+			</div>
+			<div>
+				<img src="images/IndiaFont-V4-Pro-Logo.svg" alt="" draggable="false" loading="lazy">
+			</div>
+			<div id="loader-container" class="loader-container">
+				<div class="preloader"></div>
+				<p>Please wait while key assets are being loaded, your wait will be worth...</p>
+				<div id="quote-container">
+					<p2 id="quote-text"></p>
+				</div>
+				<script>
+					// Array of quotes
+					const quotes = [
+"✨ PRO-TIP: अपनी कॉलिग्राफी को विशेष रुप देने के लिए विभिन्न फ़ॉन्ट वेरिएबल्स का प्रयोग करें।",
+"✅ PRO-TIP: Use a magnetic selection tool for a precise selection of single letters to apply variables.",
+"🏆 Creativity knows no boundaries; let it flow.",
+"✅ PRO-TIP: बेहतर कॉलिग्राफी आर्ट के लिए ALOM-WILOM और उनके परिवर्तन का उपयोग करना न भूलें।",
+"✅ PRO-TIP: Select only a single letter to get variables for it.",
+"🏆 Designing dreams, one detail at a time.",
+"✅ PRO-TIP: Use Font Filters to find of perfect font such as HINDI, CALLIGRPAY, and BOLD, font.",
+"🏆 Timeless design, boundless creativity.",
+"✅ PRO-TIP: Export and use PDF of calligraphy art only, without design, if you wish to do Design work with Adobe or Coral Draw.",
+"🎨 Designing tomorrow, inspired by today.",
+"✅ PRO-TIP: Don't miss out on the creative possibilities! Utilize the 50+ 'आ की मात्रा ' variables to elevate your calligraphy designs.",
+"🏆 Good things take time, best things just happen!",
+"✅ PRO-TIP: You can set App Zoom preference as per your requirements from File Menu > App Preferences.",
+"🏆 In design, simplicity is the ultimate sophistication.",
+"✅ PRO-TIP: Turn ON snipping tool from Edit menu in order to help with object alignment.",
+"🏆 Time reveals the true essence of design.",
+"✅ PRO-TIP: Check USER MANUAL, given under Help Menu.",
+"🏆 Design is a journey, not a destination.",
+"✅ PRO-TIP: Alwasy press ESC, once you are done with typing.",
+"📌 Effortlessly organize your most-used fonts by adding them to your favorites.",
+"🏆 The only time you should ever look back is to see how far you've come.",
+"🏆 Don't cry because it's over, smile because it happened. - Dr Seuss.",
+"✅ PRO-TIP: Combine variables from multiple letters to create harmonious designs.",
+"🏆 Calligraphy is my language, and IndiaFont is my dictionary of creative expression.",
+"✅ PRO-TIP: Play with the 12 design options to find the perfect balance for a captivating look.",
+"🏆 For every designer, IndiaFont is not just a tool; it's the palette of possibilities.",
+"✅ PRO-TIP: Learn the shortcuts for faster and more efficient typing.",
+"🏆 Ditch the ordinary fonts, embrace the extraordinary – that's the IndiaFont way!",
+"✅ PRO-TIP: Apply image filters judiciously to enhance the overall aesthetics of your designs.",
+"🎨 In the world of fonts, be a calligraphy Picasso with IndiaFont!",
+"🖼️ PRO-TIP: Make the most of the expanded Art Library by incorporating diverse backgrounds and clip arts.",
+"🏆 IndiaFont: Because your words deserve to dance on the canvas of creativity.",
+"🏆 Unleash your inner artist – one click, one letter at a time with IndiaFont!",
+"🏆 Why settle for ordinary when IndiaFont lets you create extraordinary?",
+"🏆 IndiaFont: Where typing is a symphony, and every character is a note of creativity.",
+"🏆 चलो कैलीग्राफी बनाते हैं",
+"🏆 एक अच्छे डिज़ाइन से शब्दों को अधिक अर्थपूर्ण बनाया जा सकता है।",
+"🏆 जीवन को और भी रंगीन बनाएं, एक सुन्दर फ़ॉन्ट के साथ।",
+"💖 Made in India, with Love!",
+						// Add more quotes as needed
+					];
+
+					// Function to get a random quote
+					function getRandomQuote() {
+						const randomIndex = Math.floor(Math.random() * quotes.length);
+						return quotes[randomIndex];
+					}
+
+					// Display a random quote on page load
+					document.getElementById('quote-text').innerText = getRandomQuote();
+				</script>
+			</div>
+		</div>
+
+		<div class="left-column">
+			<img src="images/Welcome.gif" alt="" draggable="false">
+		</div>
+	</div>
+	<script src="splash.js"></script>
+</body>
+
+</html>
